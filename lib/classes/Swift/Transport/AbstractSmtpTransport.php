@@ -22,6 +22,8 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
     protected $started = false;
 
     /** The domain name to use in HELO command */
+    // не ошибка так как прописывает стандартный хост для начального обмена по smtp
+    // appchecker CWE-798
     protected $domain = '[127.0.0.1]';
 
     /** The event dispatching layer */
